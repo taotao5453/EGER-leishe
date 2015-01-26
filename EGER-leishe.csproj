@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProjectGuid>{163FCE8B-0F03-41F5-8A47-A2E59CAC7D17}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <OutputPath>bin</OutputPath>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <TypeScriptToolsVersion>1.1</TypeScriptToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <StartWithIE>true</StartWithIE>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="launcher\copy_native_loader.js" />
+    <Content Include="launcher\egret_loader.js" />
+    <Content Include="launcher\egret_require.js" />
+    <Content Include="launcher\game-min.js" />
+    <Content Include="launcher\grayscale.js" />
+    <Content Include="launcher\index.html" />
+    <Content Include="launcher\native_loader.js" />
+    <Content Include="launcher\native_require.js" />
+    <Content Include="launcher\release.html" />
+    <Content Include="launcher\runtime_loader.js" />
+    <Content Include="launcher\WeixinAPI.js" />
+    <Content Include="libs\core\egret\context\Browser.js" />
+    <Content Include="libs\core\egret\context\devices\DeviceContext.js" />
+    <Content Include="libs\core\egret\context\devices\HTML5DeviceContext.js" />
+    <Content Include="libs\core\egret\context\display\HTML5StageText.js" />
+    <Content Include="libs\core\egret\context\display\StageText.js" />
+    <Content Include="libs\core\egret\context\external\ExternalInterface.js" />
+    <Content Include="libs\core\egret\context\interactive\HTML5TouchContext.js" />
+    <Content Include="libs\core\egret\context\interactive\InteractionMode.js" />
+    <Content Include="libs\core\egret\context\interactive\TouchContext.js" />
+    <Content Include="libs\core\egret\context\localStorage\localStorage.js" />
+    <Content Include="libs\core\egret\context\MainContext.js" />
+    <Content Include="libs\core\egret\context\net\HTML5NetContext.js" />
+    <Content Include="libs\core\egret\context\net\NetContext.js" />
+    <Content Include="libs\core\egret\context\renderer\dom\DOMTrans.js" />
+    <Content Include="libs\core\egret\context\renderer\HTML5CanvasRenderer.js" />
+    <Content Include="libs\core\egret\context\renderer\RendererContext.js" />
+    <Content Include="libs\core\egret\context\renderer\RenderFilter.js" />
+    <Content Include="libs\core\egret\context\renderer\WebGLRenderer.js" />
+    <Content Include="libs\core\egret\context\renderer\webgl\WebGLShaderManager.js" />
+    <Content Include="libs\core\egret\context\renderer\webgl\WebGLUtils.js" />
+    <Content Include="libs\core\egret\context\StageDelegate.js" />
+    <Content Include="libs\core\egret\context\Ticker.js" />
+    <Content Include="libs\core\egret\display\Bitmap.js" />
+    <Content Include="libs\core\egret\display\BitmapFillMode.js" />
+    <Content Include="libs\core\egret\display\BlendMode.js" />
+    <Content Include="libs\core\egret\display\DisplayObject.js" />
+    <Content Include="libs\core\egret\display\DisplayObjectContainer.js" />
+    <Content Include="libs\core\egret\display\Graphics.js" />
+    <Content Include="libs\core\egret\display\MovieClip.js" />
+    <Content Include="libs\core\egret\display\RenderTexture.js" />
+    <Content Include="libs\core\egret\display\Scroller.js" />
+    <Content Include="libs\core\egret\display\ScrollView.js" />
+    <Content Include="libs\core\egret\display\Shape.js" />
+    <Content Include="libs\core\egret\display\Sprite.js" />
+    <Content Include="libs\core\egret\display\SpriteSheet.js" />
+    <Content Include="libs\core\egret\display\Stage.js" />
+    <Content Include="libs\core\egret\display\StageScaleMode.js" />
+    <Content Include="libs\core\egret\display\Texture.js" />
+    <Content Include="libs\core\egret\events\Event.js" />
+    <Content Include="libs\core\egret\events\EventDispatcher.js" />
+    <Content Include="libs\core\egret\events\EventPhase.js" />
+    <Content Include="libs\core\egret\events\HTTPStatusEvent.js" />
+    <Content Include="libs\core\egret\events\IEventDispatcher.js" />
+    <Content Include="libs\core\egret\events\IOErrorEvent.js" />
+    <Content Include="libs\core\egret\events\ProgressEvent.js" />
+    <Content Include="libs\core\egret\events\TimerEvent.js" />
+    <Content Include="libs\core\egret\events\TouchEvent.js" />
+    <Content Include="libs\core\egret\geom\Matrix.js" />
+    <Content Include="libs\core\egret\geom\Point.js" />
+    <Content Include="libs\core\egret\geom\Rectangle.js" />
+    <Content Include="libs\core\egret\layout\HorizontalAlign.js" />
+    <Content Include="libs\core\egret\layout\VerticalAlign.js" />
+    <Content Include="libs\core\egret\media\Sound.js" />
+    <Content Include="libs\core\egret\net\URLLoader.js" />
+    <Content Include="libs\core\egret\net\URLLoaderDataFormat.js" />
+    <Content Include="libs\core\egret\net\URLRequest.js" />
+    <Content Include="libs\core\egret\net\URLRequestMethod.js" />
+    <Content Include="libs\core\egret\net\URLVariables.js" />
+    <Content Include="libs\core\egret\text\BitmapText.js" />
+    <Content Include="libs\core\egret\text\BitmapTextSpriteSheet.js" />
+    <Content Include="libs\core\egret\text\HtmlTextParser.js" />
+    <Content Include="libs\core\egret\text\InputController.js" />
+    <Content Include="libs\core\egret\text\TextField.js" />
+    <Content Include="libs\core\egret\text\TextFieldType.js" />
+    <Content Include="libs\core\egret\text\TextInput.js" />
+    <Content Include="libs\core\egret\tween\Ease.js" />
+    <Content Include="libs\core\egret\tween\Tween.js" />
+    <Content Include="libs\core\egret\utils\ByteArray.js" />
+    <Content Include="libs\core\egret\utils\callLater.js" />
+    <Content Include="libs\core\egret\utils\getDefinitionByName.js" />
+    <Content Include="libs\core\egret\utils\getQualifiedClassName.js" />
+    <Content Include="libs\core\egret\utils\getTimer.js" />
+    <Content Include="libs\core\egret\utils\hasDefinition.js" />
+    <Content Include="libs\core\egret\utils\HashObject.js" />
+    <Content Include="libs\core\egret\utils\IHashObject.js" />
+    <Content Include="libs\core\egret\utils\Injector.js" />
+    <Content Include="libs\core\egret\utils\Logger.js" />
+    <Content Include="libs\core\egret\utils\Profiler.js" />
+    <Content Include="libs\core\egret\utils\Recycler.js" />
+    <Content Include="libs\core\egret\utils\SAXParser.js" />
+    <Content Include="libs\core\egret\utils\setTimeout.js" />
+    <Content Include="libs\core\egret\utils\Timer.js" />
+    <Content Include="libs\core\egret\utils\toColorString.js" />
+    <Content Include="libs\core\egret\utils\XML.js" />
+    <Content Include="libs\core\extension\dragonbones\dragonBones.js" />
+    <Content Include="libs\core\extension\dragonbones\DragonBonesEgretBridge.js" />
+    <Content Include="libs\core\extension\gui\collections\ArrayCollection.js" />
+    <Content Include="libs\core\extension\gui\collections\ICollection.js" />
+    <Content Include="libs\core\extension\gui\collections\ITreeCollection.js" />
+    <Content Include="libs\core\extension\gui\collections\ObjectCollection.js" />
+    <Content Include="libs\core\extension\gui\components\Alert.js" />
+    <Content Include="libs\core\extension\gui\components\Button.js" />
+    <Content Include="libs\core\extension\gui\components\CheckBox.js" />
+    <Content Include="libs\core\extension\gui\components\DataGroup.js" />
+    <Content Include="libs\core\extension\gui\components\DropDownList.js" />
+    <Content Include="libs\core\extension\gui\components\EditableText.js" />
+    <Content Include="libs\core\extension\gui\components\Group.js" />
+    <Content Include="libs\core\extension\gui\components\HScrollBar.js" />
+    <Content Include="libs\core\extension\gui\components\HSlider.js" />
+    <Content Include="libs\core\extension\gui\components\IItemRenderer.js" />
+    <Content Include="libs\core\extension\gui\components\IItemRendererOwner.js" />
+    <Content Include="libs\core\extension\gui\components\ITreeItemRenderer.js" />
+    <Content Include="libs\core\extension\gui\components\Label.js" />
+    <Content Include="libs\core\extension\gui\components\List.js" />
+    <Content Include="libs\core\extension\gui\components\Panel.js" />
+    <Content Include="libs\core\extension\gui\components\PopUpAnchor.js" />
+    <Content Include="libs\core\extension\gui\components\ProgressBar.js" />
+    <Content Include="libs\core\extension\gui\components\ProgressBarDirection.js" />
+    <Content Include="libs\core\extension\gui\components\RadioButton.js" />
+    <Content Include="libs\core\extension\gui\components\RadioButtonGroup.js" />
+    <Content Include="libs\core\extension\gui\components\Rect.js" />
+    <Content Include="libs\core\extension\gui\components\Scroller.js" />
+    <Content Include="libs\core\extension\gui\components\Skin.js" />
+    <Content Include="libs\core\extension\gui\components\SkinnableComponent.js" />
+    <Content Include="libs\core\extension\gui\components\SkinnableContainer.js" />
+    <Content Include="libs\core\extension\gui\components\SkinnableDataContainer.js" />
+    <Content Include="libs\core\extension\gui\components\Spacer.js" />
+    <Content Include="libs\core\extension\gui\components\supportClasses\Animation.js" />
+    <Content Include="libs\core\extension\gui\components\supportClasses\ButtonBase.js" />
+    <Content Include="libs\core\extension\gui\components\supportClasses\DefaultAssetAdapter.js" />
+    <Content Include="libs\core\extension\gui\components\supportClasses\DefaultSkinAdapter.js" />
+    <Content Include="libs\core\extension\gui\components\supportClasses\DropDownController.js" />
+    <Content Include="libs\core\extension\gui\components\supportClasses\DropDownListBase.js" />
+    <Content Include="libs\core\extension\gui\components\supportClasses\GroupBase.js" />
+    <Content Include="libs\core\extension\gui\components\supportClasses\ItemRenderer.js" />
+    <Content Include="libs\core\extension\gui\components\supportClasses\ListBase.js" />
+    <Content Include="libs\core\extension\gui\components\supportClasses\Range.js" />
+    <Content Include="libs\core\extension\gui\components\supportClasses\SkinBasicLayout.js" />
+    <Content Include="libs\core\extension\gui\components\supportClasses\SkinnableTextBase.js" />
+    <Content Include="libs\core\extension\gui\components\supportClasses\SliderBase.js" />
+    <Content Include="libs\core\extension\gui\components\supportClasses\TextBase.js" />
+    <Content Include="libs\core\extension\gui\components\supportClasses\Theme.js" />
+    <Content Include="libs\core\extension\gui\components\supportClasses\ToggleButtonBase.js" />
+    <Content Include="libs\core\extension\gui\components\supportClasses\TrackBase.js" />
+    <Content Include="libs\core\extension\gui\components\supportClasses\TreeItemRenderer.js" />
+    <Content Include="libs\core\extension\gui\components\TabBar.js" />
+    <Content Include="libs\core\extension\gui\components\TabBarButton.js" />
+    <Content Include="libs\core\extension\gui\components\TextArea.js" />
+    <Content Include="libs\core\extension\gui\components\TextInput.js" />
+    <Content Include="libs\core\extension\gui\components\TitleWindow.js" />
+    <Content Include="libs\core\extension\gui\components\ToggleButton.js" />
+    <Content Include="libs\core\extension\gui\components\ToggleSwitch.js" />
+    <Content Include="libs\core\extension\gui\components\Tree.js" />
+    <Content Include="libs\core\extension\gui\components\UIAsset.js" />
+    <Content Include="libs\core\extension\gui\components\ViewStack.js" />
+    <Content Include="libs\core\extension\gui\components\VScrollBar.js" />
+    <Content Include="libs\core\extension\gui\components\VSlider.js" />
+    <Content Include="libs\core\extension\gui\core\ClassFactory.js" />
+    <Content Include="libs\core\extension\gui\core\IAssetAdapter.js" />
+    <Content Include="libs\core\extension\gui\core\IContainer.js" />
+    <Content Include="libs\core\extension\gui\core\IDisplayText.js" />
+    <Content Include="libs\core\extension\gui\core\IEditableText.js" />
+    <Content Include="libs\core\extension\gui\core\IFactory.js" />
+    <Content Include="libs\core\extension\gui\core\IInvalidateDisplay.js" />
+    <Content Include="libs\core\extension\gui\core\IInvalidating.js" />
+    <Content Include="libs\core\extension\gui\core\ILayoutElement.js" />
+    <Content Include="libs\core\extension\gui\core\ISkin.js" />
+    <Content Include="libs\core\extension\gui\core\ISkinAdapter.js" />
+    <Content Include="libs\core\extension\gui\core\ISkinnableClient.js" />
+    <Content Include="libs\core\extension\gui\core\IStateClient.js" />
+    <Content Include="libs\core\extension\gui\core\IUIComponent.js" />
+    <Content Include="libs\core\extension\gui\core\IUIStage.js" />
+    <Content Include="libs\core\extension\gui\core\IViewport.js" />
+    <Content Include="libs\core\extension\gui\core\IViewStack.js" />
+    <Content Include="libs\core\extension\gui\core\IVisualElement.js" />
+    <Content Include="libs\core\extension\gui\core\IVisualElementContainer.js" />
+    <Content Include="libs\core\extension\gui\core\NavigationUnit.js" />
+    <Content Include="libs\core\extension\gui\core\PopUpPosition.js" />
+    <Content Include="libs\core\extension\gui\core\ScrollPolicy.js" />
+    <Content Include="libs\core\extension\gui\core\UIComponent.js" />
+    <Content Include="libs\core\extension\gui\core\UIGlobals.js" />
+    <Content Include="libs\core\extension\gui\core\UILayer.js" />
+    <Content Include="libs\core\extension\gui\core\UIStage.js" />
+    <Content Include="libs\core\extension\gui\events\CloseEvent.js" />
+    <Content Include="libs\core\extension\gui\events\CollectionEvent.js" />
+    <Content Include="libs\core\extension\gui\events\CollectionEventKind.js" />
+    <Content Include="libs\core\extension\gui\events\ElementExistenceEvent.js" />
+    <Content Include="libs\core\extension\gui\events\IndexChangeEvent.js" />
+    <Content Include="libs\core\extension\gui\events\ListEvent.js" />
+    <Content Include="libs\core\extension\gui\events\MoveEvent.js" />
+    <Content Include="libs\core\extension\gui\events\PopUpEvent.js" />
+    <Content Include="libs\core\extension\gui\events\PropertyChangeEvent.js" />
+    <Content Include="libs\core\extension\gui\events\PropertyChangeEventKind.js" />
+    <Content Include="libs\core\extension\gui\events\RendererExistenceEvent.js" />
+    <Content Include="libs\core\extension\gui\events\ResizeEvent.js" />
+    <Content Include="libs\core\extension\gui\events\SkinPartEvent.js" />
+    <Content Include="libs\core\extension\gui\events\StateChangeEvent.js" />
+    <Content Include="libs\core\extension\gui\events\TrackBaseEvent.js" />
+    <Content Include="libs\core\extension\gui\events\TreeEvent.js" />
+    <Content Include="libs\core\extension\gui\events\UIEvent.js" />
+    <Content Include="libs\core\extension\gui\layouts\BasicLayout.js" />
+    <Content Include="libs\core\extension\gui\layouts\ColumnAlign.js" />
+    <Content Include="libs\core\extension\gui\layouts\HorizontalLayout.js" />
+    <Content Include="libs\core\extension\gui\layouts\RowAlign.js" />
+    <Content Include="libs\core\extension\gui\layouts\supportClasses\LayoutBase.js" />
+    <Content Include="libs\core\extension\gui\layouts\TileLayout.js" />
+    <Content Include="libs\core\extension\gui\layouts\TileOrientation.js" />
+    <Content Include="libs\core\extension\gui\layouts\VerticalLayout.js" />
+    <Content Include="libs\core\extension\gui\managers\ILayoutManagerClient.js" />
+    <Content Include="libs\core\extension\gui\managers\impl\PopUpManagerImpl.js" />
+    <Content Include="libs\core\extension\gui\managers\IPopUpManager.js" />
+    <Content Include="libs\core\extension\gui\managers\layoutClass\DepthQueue.js" />
+    <Content Include="libs\core\extension\gui\managers\LayoutManager.js" />
+    <Content Include="libs\core\extension\gui\managers\PopUpManager.js" />
+    <Content Include="libs\core\extension\gui\states\AddItems.js" />
+    <Content Include="libs\core\extension\gui\states\IOverride.js" />
+    <Content Include="libs\core\extension\gui\states\OverrideBase.js" />
+    <Content Include="libs\core\extension\gui\states\SetProperty.js" />
+    <Content Include="libs\core\extension\gui\states\State.js" />
+    <Content Include="libs\core\extension\gui\utils\getScale9Grid.js" />
+    <Content Include="libs\core\extension\gui\utils\LayoutUtil.js" />
+    <Content Include="libs\core\extension\gui\utils\setProperties.js" />
+    <Content Include="libs\core\extension\resource\analyzer\AnalyzerBase.js" />
+    <Content Include="libs\core\extension\resource\analyzer\BinAnalyzer.js" />
+    <Content Include="libs\core\extension\resource\analyzer\FontAnalyzer.js" />
+    <Content Include="libs\core\extension\resource\analyzer\ImageAnalyzer.js" />
+    <Content Include="libs\core\extension\resource\analyzer\JsonAnalyzer.js" />
+    <Content Include="libs\core\extension\resource\analyzer\SheetAnalyzer.js" />
+    <Content Include="libs\core\extension\resource\analyzer\SoundAnalyzer.js" />
+    <Content Include="libs\core\extension\resource\analyzer\TextAnalyzer.js" />
+    <Content Include="libs\core\extension\resource\analyzer\XMLAnalyzer.js" />
+    <Content Include="libs\core\extension\resource\core\ResourceConfig.js" />
+    <Content Include="libs\core\extension\resource\core\ResourceItem.js" />
+    <Content Include="libs\core\extension\resource\core\ResourceLoader.js" />
+    <Content Include="libs\core\extension\resource\events\ResourceEvent.js" />
+    <Content Include="libs\core\extension\resource\Resource.js" />
+    <Content Include="libs\core\jslib\NumberUtils.js" />
+    <Content Include="resource\assets\assets.png" />
+    <Content Include="resource\assets\icon.png" />
+    <Content Include="resource\assets\load.png" />
+    <Content Include="resource\assets\socialIcon.png" />
+    <Content Include="resource\assets\默认素材\acceptBtn.png" />
+    <Content Include="resource\assets\默认素材\alertBg.png" />
+    <Content Include="resource\assets\默认素材\bg.png" />
+    <Content Include="resource\assets\默认素材\bg2.png" />
+    <Content Include="resource\assets\默认素材\cancelBtn.png" />
+    <Content Include="resource\assets\默认素材\continueBtn.png" />
+    <Content Include="resource\assets\默认素材\fbBtn.png" />
+    <Content Include="resource\assets\默认素材\fontImg.png" />
+    <Content Include="resource\assets\默认素材\helpBtn.png" />
+    <Content Include="resource\assets\默认素材\logoImg.png" />
+    <Content Include="resource\assets\默认素材\menueBtn.png" />
+    <Content Include="resource\assets\默认素材\musicBtn.png" />
+    <Content Include="resource\assets\默认素材\nextBtn.png" />
+    <Content Include="resource\assets\默认素材\panelBg.png" />
+    <Content Include="resource\assets\默认素材\pauseBtn.png" />
+    <Content Include="resource\assets\默认素材\pgBar.png" />
+    <Content Include="resource\assets\默认素材\pgBg.png" />
+    <Content Include="resource\assets\默认素材\rankBtn.png" />
+    <Content Include="resource\assets\默认素材\retryBtn.png" />
+    <Content Include="resource\assets\默认素材\setBtn.png" />
+    <Content Include="resource\assets\默认素材\shareBtn.png" />
+    <Content Include="resource\assets\默认素材\shareIcon\arrow.png" />
+    <Content Include="resource\assets\默认素材\shareIcon\douban.png" />
+    <Content Include="resource\assets\默认素材\shareIcon\qq.png" />
+    <Content Include="resource\assets\默认素材\shareIcon\qqweibo.png" />
+    <Content Include="resource\assets\默认素材\shareIcon\qqzone.png" />
+    <Content Include="resource\assets\默认素材\shareIcon\renren.png" />
+    <Content Include="resource\assets\默认素材\shareIcon\sinaweibo.png" />
+    <Content Include="resource\assets\默认素材\shareIcon\weixin.png" />
+    <Content Include="resource\assets\默认素材\shopBtn.png" />
+    <Content Include="resource\assets\默认素材\soundBtn.png" />
+    <Content Include="resource\assets\默认素材\starImg.png" />
+    <Content Include="resource\assets\默认素材\startBtn.png" />
+    <Content Include="resource\assets\默认素材\tipsBg.png" />
+    <Content Include="resource\assets\默认素材\titleBg.png" />
+    <TypeScriptCompile Include="src\core\component\EButton.ts" />
+    <TypeScriptCompile Include="src\core\component\ETabBar.ts" />
+    <TypeScriptCompile Include="src\core\component\ETextField.ts" />
+    <TypeScriptCompile Include="src\core\component\EToggleButton.ts" />
+    <TypeScriptCompile Include="src\core\component\EToggleSwitch.ts" />
+    <TypeScriptCompile Include="src\MyGameConfig.ts" />
+    <TypeScriptCompile Include="src\view\run\RunBackGroundScene.ts" />
+    <TypeScriptCompile Include="src\view\run\RunMan.ts" />
+    <TypeScriptCompile Include="src\view\run\RunWall.ts" />
+    <TypeScriptCompile Include="src\view\run\RunLife.ts" />
+    <TypeScriptCompile Include="src\taotao\TaotaoUtils.ts" />
+    <TypeScriptCompile Include="src\view\run\RunGetFriend.ts" />
+    <TypeScriptCompile Include="src\view\run\RunBackGround.ts" />
+    <TypeScriptCompile Include="src\componentExt\VerticalTipsPanel.ts" />
+    <TypeScriptCompile Include="src\componentExt\WaitPanel.ts" />
+    <TypeScriptCompile Include="src\view\LingjiangPanel.ts" />
+    <TypeScriptCompile Include="src\ConnectUtils.ts" />
+    <TypeScriptCompile Include="src\taotao\TaotaoManager4EGER.ts" />
+    <Content Include="web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="build.bat" />
+    <Content Include="build_engine.bat" />
+    <Content Include="egretProperties.json" />
+    <Content Include="libs\module_reference.json" />
+    <Content Include="run.bat" />
+    <Content Include="README.md" />
+    <Content Include="resource\assets\assets.json" />
+    <Content Include="resource\assets\load.json" />
+    <Content Include="resource\assets\socialIcon.json" />
+    <Content Include="resource\assets\ui.properties" />
+    <Content Include="resource\config\description.json" />
+    <Content Include="resource\resource.json" />
+    <Content Include="resource\ui.properties" />
+    <None Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <None Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </None>
+    <Content Include="发布文档\0.1_Release Note.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="libs\core\core.d.ts" />
+    <TypeScriptCompile Include="libs\core\egret\context\html5.d.ts" />
+    <TypeScriptCompile Include="libs\core\extension\dragonbones\dragonbones.d.ts" />
+    <TypeScriptCompile Include="libs\core\extension\gui\gui.d.ts" />
+    <TypeScriptCompile Include="libs\WeixinAPI.d.ts" />
+    <TypeScriptCompile Include="libs\_references.ts" />
+    <TypeScriptCompile Include="src\componentExt\LoadingPanel.ts" />
+    <TypeScriptCompile Include="src\core\component\adsense\AdSense.ts" />
+    <TypeScriptCompile Include="src\core\component\adsense\google.d.ts" />
+    <TypeScriptCompile Include="src\core\component\AlertPanel.ts" />
+    <TypeScriptCompile Include="src\core\component\CMovieClip.ts" />
+    <TypeScriptCompile Include="src\core\component\componentClass\ShareIconRender.ts" />
+    <TypeScriptCompile Include="src\core\component\HtmlText.ts" />
+    <TypeScriptCompile Include="src\core\component\ImgButton.ts" />
+    <TypeScriptCompile Include="src\core\component\particle\GravityParticle.ts" />
+    <TypeScriptCompile Include="src\core\component\particle\GravityParticleSystem.ts" />
+    <TypeScriptCompile Include="src\core\component\particle\Particle.ts" />
+    <TypeScriptCompile Include="src\core\component\particle\ParticleSystem.ts" />
+    <TypeScriptCompile Include="src\core\component\ShareIconPanel.ts" />
+    <TypeScriptCompile Include="src\core\component\TipsManager.ts" />
+    <TypeScriptCompile Include="src\core\component\TipsPanel.ts" />
+    <TypeScriptCompile Include="src\core\config\GameConfig.ts" />
+    <TypeScriptCompile Include="src\core\data\GlobalData.ts" />
+    <TypeScriptCompile Include="src\core\data\PropertiesAnalyzer.ts" />
+    <TypeScriptCompile Include="src\core\net\Network.ts" />
+    <TypeScriptCompile Include="src\core\notification\MainNotify.ts" />
+    <TypeScriptCompile Include="src\core\utils\EffectUtils.ts" />
+    <TypeScriptCompile Include="src\core\utils\Global.ts" />
+    <TypeScriptCompile Include="src\core\utils\md5.ts" />
+    <TypeScriptCompile Include="src\core\utils\NativeApi.ts" />
+    <TypeScriptCompile Include="src\core\utils\ObjectPool.ts" />
+    <TypeScriptCompile Include="src\core\utils\RegUtils.ts" />
+    <TypeScriptCompile Include="src\core\utils\UtilsClass\BitmapBlink.ts" />
+    <TypeScriptCompile Include="src\core\utils\UtilsClass\GameObject.ts" />
+    <TypeScriptCompile Include="src\core\utils\UtilsClass\LEvent.ts" />
+    <TypeScriptCompile Include="src\core\utils\UtilsClass\LListener.ts" />
+    <TypeScriptCompile Include="src\core\utils\UtilsClass\TipsUtils.ts" />
+    <TypeScriptCompile Include="src\core\views\BasePanel.ts" />
+    <TypeScriptCompile Include="src\core\views\GameScene.ts" />
+    <TypeScriptCompile Include="src\core\views\PanelManager.ts" />
+    <TypeScriptCompile Include="src\core\views\PopUpManager.ts" />
+    <TypeScriptCompile Include="src\GameApp.ts" />
+    <TypeScriptCompile Include="src\view\GameOverPanel.ts" />
+    <TypeScriptCompile Include="src\view\GamePanel.ts" />
+    <TypeScriptCompile Include="src\view\SharePanel.ts" />
+    <TypeScriptCompile Include="src\view\StartPanel.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin-debug\" />
+    <Folder Include="release\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>Egret1</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\WebApplications\Microsoft.WebApplication.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3847</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:3847/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <TypeScriptRemoveComments>false</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptOutDir>bin-debug\</TypeScriptOutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <TypeScriptRemoveComments>true</TypeScriptRemoveComments>
+    <TypeScriptSourceMap>false</TypeScriptSourceMap>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <PropertyGroup>
+    <PreBuildEvent>"$(ProjectDir)egret.cmd" build "$(ProjectDir)\" -sourcemap</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>if $(ConfigurationName) == Release "$(ProjectDir)egret.cmd" publish "$(ProjectDir)\"</PostBuildEvent>
+  </PropertyGroup>
+</Project>

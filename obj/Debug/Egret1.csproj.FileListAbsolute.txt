@@ -1,0 +1,5 @@
+D:\work\test\Egret1\Egret1\bin\Egret1.dll.config
+D:\work\test\Egret1\Egret1\bin\Egret1.dll
+D:\work\test\Egret1\Egret1\bin\Egret1.pdb
+D:\work\test\Egret1\Egret1\obj\Debug\Egret1.dll
+D:\work\test\Egret1\Egret1\obj\Debug\Egret1.pdb

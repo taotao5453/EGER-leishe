@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>NaBu手环城市漫步</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no,target-densitydpi=device-dpi"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+    
+
+    <style>
+        body {
+            text-align: center;
+            background: #000000;
+            padding: 0;
+            border: 0;
+            margin: 0;
+            height: 100%;
+        }
+        html {
+            -ms-touch-action: none; /* Direct all pointer events to JavaScript code. */
+            overflow: hidden;
+        }
+        div, canvas {
+            display:block;
+            position:absolute;
+            margin: 0 auto;
+            padding: 0;
+            border: 0;
+        }
+    </style>
+</head>
+<div style="display:none">
+    <input id="files-upload" type="file" width='0' height='0' multiple accept="image/.*;capture=camera" name="file"> 
+    <div id="result" name="result"></div> 
+</div>
+<div style="position:relative;" id="gameDiv"></div>
+<script src="launcher/WeixinAPI.js" async="false"></script>
+<!-- <script src="launcher/grayscale.js" async="false"></script> -->
+<script>var document_class = "GameApp";</script><!--这部分内容在编译时会被替换，要修改文档类，请到工程目录下的egretProperties.json内编辑。-->
+<script src="launcher/egret_require.js"></script>
+<script src="launcher/egret_loader.js"></script>
+<script src="launcher/game-min.js"></script>
+<script src="//wx.9tech.cn/open/sdk.php?token=razerr45"></script>
+ <script type="text/javascript">
+//     if (window.DeviceMotionEvent) {
+//         window.addEventListener('devicemotion', deviceMotionHandler, false);
+//     } else {
+//         alert('本设备不支持devicemotion事件');
+//     }
+//     function deviceMotionHandler(eventData) {
+//         window["rootContainer"].deviceMotionHandler(eventData);
+//     }
+// </script>
+<!-- <div style="display:none">
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fa9feb11c0f8dc86283e1a6fc661600c7' type='text/javascript'%3E%3C/script%3E"));
+</script>    
+</div> -->
+
+
+<script>
+    egret_h5.startGame();
+</script>
+</body>
+</html>

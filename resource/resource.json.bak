@@ -1,0 +1,23 @@
+{
+"resources":
+	[
+		{"name":"load","type":"sheet","url":"assets/load.json"},
+		{"name":"assets","type":"sheet","url":"assets/assets.json"},
+		{"name":"ui_text","type":"prop","url":"assets/ui.properties"},
+		{"name":"game","type":"sheet","url":"assets/game.json"},
+		{"name":"gameBg_down","type":"image","url":"assets/gameBg_down.png"},
+		{"name":"gameBg_middle","type":"image","url":"assets/gameBg_middle.png"},
+		{"name":"gameBg_top","type":"image","url":"assets/gameBg_top.png"},
+		{"name":"man_json","type":"json","url":"assets/man.json"},
+		{"name":"man_png","type":"image","url":"assets/man.png"},
+		{"name":"share_cover","type":"image","url":"assets/share_cover.png"},
+		{"name":"bgmusic","type":"sound","url":"assets/bgmusic.mp3"},
+		{"name":"description","type":"json","url":"config/description.json"}
+
+	],
+"groups":
+	[
+		{"name":"loading","keys":"load"},
+		{"name":"preload","keys":"assets,game,gameBg_down,gameBg_middle,gameBg_top,man_json,man_png,share_cover,bgmusic,description"}
+	]
+}
